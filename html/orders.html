@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Pedidos - Restaurante Sabores</title>
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Restaurante Sabores</h1>
+        <div class="user-actions">
+            <button id="logout-btn" style="display: none;" onclick="logout()">Cerrar Sesión</button>
+            <button id="menu-btn" onclick="window.location.href='menu.html'">Menú</button>
+        </div>
+    </div>
+    <div class="container">
+        <div id="orders-section" class="orders-section">
+            <h2>Mis Pedidos</h2>
+            <div id="last-order-preview" class="last-order-preview"></div>
+            <div id="client-orders"></div>
+        </div>
+    </div>
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('product-modal')">×</span>
+            <div id="product-preview" class="product-preview"></div>
+        </div>
+    </div>
+    <script src="../js/menu.js"></script>
+    <script>
+        // Ejecutar showOrders al cargar la página
+        window.onload = function() {
+            showOrders();
+        };
+    </script>
+</body>
+</html>
